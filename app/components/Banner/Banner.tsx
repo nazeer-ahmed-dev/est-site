@@ -38,24 +38,15 @@ const Banner = () => {
                 />
                 <img
                   className="inline-block h-12 w-12 rounded-full ring-2 ring-white"
-                  src={'/assets/profile/nazeerahmed.png'}
+                  src={'/assets/profile/premsagar.png'}
                   alt=""
                 />
                 <img
                   className="inline-block h-12 w-12 rounded-full ring-2 ring-white"
-                  src={'/assets/profile/nazeerahmed.png'}
+                  src={'/assets/profile/partabrai.png'}
                   alt=""
                 />
-                <img
-                  className="inline-block h-12 w-12 rounded-full ring-2 ring-white"
-                  src={'/assets/profile/nazeerahmed.png'}
-                  alt=""
-                />
-                <img
-                  className="inline-block h-12 w-12 rounded-full ring-2 ring-white"
-                  src={'/assets/profile/nazeerahmed.png'}
-                  alt=""
-                />
+               
               </div>
               <div className="bannerBorder sm:pl-8">
                 <div className="flex justify-center sm:justify-start">

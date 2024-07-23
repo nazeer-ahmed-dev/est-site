@@ -19,30 +19,16 @@ const postData: DataType[] = [
         imgSrc: '/assets/profile/nazeerahmed.png',
     },
     {
-        profession: 'Software Engineer',
-        name: 'Nazeer Ahmed',
-        imgSrc: '/assets/profile/nazeerahmed.png',
+        profession: 'Accounts Office',
+        name: 'Partab Rai',
+        imgSrc: '/assets/profile/partabrai.png',
     },
     {
         profession: 'Software Engineer',
-        name: 'Nazeer Ahmed',
-        imgSrc: '/assets/profile/nazeerahmed.png',
+        name: 'Prem Sagar',
+        imgSrc: '/assets/profile/premsagar.png',
     },
-    {
-        profession: 'Software Engineer',
-        name: 'Nazeer Ahmed',
-        imgSrc: '/assets/profile/nazeerahmed.png',
-    },
-    {
-        profession: 'Software Engineer',
-        name: 'Nazeer Ahmed',
-        imgSrc: '/assets/profile/nazeerahmed.png',
-    },
-    {
-        profession: 'Software Engineer',
-        name: 'Nazeer Ahmed',
-        imgSrc: '/assets/profile/nazeerahmed.png',
-    },
+   
 ]
 
 // CAROUSEL SETTINGS
