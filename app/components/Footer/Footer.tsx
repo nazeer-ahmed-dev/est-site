@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from 'next/image';
 
 // MIDDLE LINKS DATA
 interface ProductType {
@@ -29,15 +30,21 @@ const footer = () => {
                     {/* COLUMN-1 */}
 
                     <div className='col-span-4'>
-                        <img  src={'/assets/logo/estogo.png'}
-                                    alt="EST"
-                                    width={"78px"} className='pb-4' />
-                        <h3 className='text-white text-lg font-medium leading-9 mb-4 lg:mb-20'>"Education is the most powerful weapon which you can use to change the world." <br/> (Nelson Mandela)</h3>
+                        <Image 
+                            src={'/assets/logo/estogo.png'}
+                            alt="EST"
+                            width={78}
+                            height={78}
+                            className='pb-4'
+                        />
+                        <h3 className='text-white text-lg font-medium leading-9 mb-4 lg:mb-20'>
+                            &quot;Education is the most powerful weapon which you can use to change the world.&quot; <br/> (Nelson Mandela)
+                        </h3>
                         <div className='flex gap-4'>
-                            <Link href="/"><img src={'/assets/footer/insta.svg'} alt="instagram" className='footer-icons' /></Link>
-                            <Link href="/"><img src={'/assets/footer/dribble.svg'} alt="dribble" className='footer-icons' /></Link>
-                            <Link href="/"><img src={'/assets/footer/twitter.svg'} alt="twitter" className='footer-icons' /></Link>
-                            <Link href="/"><img src={'/assets/footer/youtube.svg'} alt="youtube" className='footer-icons' /></Link>
+                            <Link href="/"><Image src={'/assets/footer/insta.svg'} alt="instagram" width={24} height={24} className='footer-icons' /></Link>
+                            <Link href="/"><Image src={'/assets/footer/dribble.svg'} alt="dribble" width={24} height={24} className='footer-icons' /></Link>
+                            <Link href="/"><Image src={'/assets/footer/twitter.svg'} alt="twitter" width={24} height={24} className='footer-icons' /></Link>
+                            <Link href="/"><Image src={'/assets/footer/youtube.svg'} alt="youtube" width={24} height={24} className='footer-icons' /></Link>
                         </div>
                     </div>
 
@@ -64,7 +71,7 @@ const footer = () => {
                             <input type="Email address" name="q" className="py-4 text-sm w-full text-white bg-gray-900 rounded-md pl-4 focus:outline-none bg-emailbg focus:text-white" placeholder="Your email address" autoComplete="off" />
                             <div className="absolute inset-y-0 right-0 flex items-center pr-2">
                                 <button className="p-1 focus:outline-none focus:shadow-outline">
-                                    <img src={'/assets/footer/inputIcon.svg'} alt="inputicon" />
+                                    <Image src={'/assets/footer/inputIcon.svg'} alt="inputicon" width={24} height={24} />
                                 </button>
                             </div>
                         </div>
