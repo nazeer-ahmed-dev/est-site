@@ -10,6 +10,7 @@ interface Name {
     profession: string
     totalCount: string
     category:string
+    status:string
 }
 
 const names: Name[] = [
@@ -17,7 +18,7 @@ const names: Name[] = [
         course: 'Free Mock Test',
         imageSrc: '/assets/events/2k24/free-mock-test-2k23.png',
         profession: 'Free Mock Test',
-        // price: '40',
+        status: 'Ended',
         category: '2024',
         totalCount:'100+ Student'
     },
@@ -25,7 +26,23 @@ const names: Name[] = [
         course: 'Free Mock Test',
         imageSrc: '/assets/events/2k24/free-mock-test-2k23.png',
         profession: 'Free Mock Test',
-        // price: '40',
+        status: 'Ended',
+        category: '2024',
+          totalCount:'100+ Student'
+    },
+    {
+        course: 'Free Mock Test',
+        imageSrc: '/assets/events/2k24/free-mock-test-2k23.png',
+        profession: 'Free Mock Test',
+        status: 'Ended',
+        category: '2024',
+        totalCount:'100+ Student'
+    },
+    {
+        course: 'Free Mock Test',
+        imageSrc: '/assets/events/2k24/free-mock-test-2k23.png',
+        profession: 'Free Mock Test',
+        status: 'Ended',
         category: '2024',
           totalCount:'100+ Student'
     },
@@ -71,7 +88,7 @@ const NamesList = () => {
                         {name.course}
                     </div>
                     <div className="mt-6 block text-lg font-semibold text-green border-solid border-2 border-green rounded-md px-1">
-                        {name.category}
+                        {name.status}
                     </div>
                 </div>
                 <p aria-hidden="true" className="mt-2 mb-5 text-2xl font-semibold ">
@@ -99,7 +116,7 @@ const NamesList = () => {
 
     return (
         <div>
-            <div id='event-section' className="mx-auto max-w-2xl py-16 px-4 sm:py-36 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div id='event-section' className="mx-auto max-w-2xl py-8 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
 
                 <div className='sm:flex justify-between items-center pb-12'>
                     <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-gray-900 my-4">Events</h2>

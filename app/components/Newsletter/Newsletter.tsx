@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 const Newsletter = () => {
     return (
@@ -7,22 +8,24 @@ const Newsletter = () => {
 
                     {/* COLUMN-1 */}
                     <div>
-                        <h3 className="text-5xl font-bold mb-3"> Join Our Newsletter </h3>
-                        <h4 className="text-lg font-medium mb-7">Subscribe our newsletter for discounts, promo and many more.</h4>
+                        <h3 className="text-5xl font-bold mb-3"> Join Our Community </h3>
+                        <h4 className="text-lg font-medium mb-7">Stay connected with us! Follow us on social media to join our community and stay updated with the latest news and events.</h4>
                         <div className="flex gap-2">
-                            <input type="Email address" name="q" className="py-4 text-sm w-full text-black bg-white rounded-md pl-4" placeholder="Enter your email" autoComplete="off" />
-                            <button className="bg-purple hover:bg-blue-700 text-white font-medium py-2 px-4 rounded">
-                                Subscribe
-                            </button>
+                        <div className='hidden sm:flex gap-4'>
+                            <Link href="/"><img src={'/assets/footer/insta-black.svg'} alt="instagram" className='footer-icons' /></Link>
+                            <Link href="/"><img src={'/assets/footer/dribble-black.svg'} alt="dribble" className='footer-icons' /></Link>
+                            <Link href="/"><img src={'/assets/footer/twitter-black.svg'} alt="twitter" className='footer-icons' /></Link>
+                            <Link href="/"><img src={'/assets/footer/youtube-black.svg'} alt="youtube" className='footer-icons' /></Link>
+                        </div> 
                         </div>
                     </div>
 
                     {/* COLUMN-2 */}
-                    <div className='hidden sm:block'>
+                    {/* <div className='hidden sm:block'>
                         <div className='float-right -mt-32'>
                             <img src={'/assets/newsletter/Free.svg'} alt="bgimg" />
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

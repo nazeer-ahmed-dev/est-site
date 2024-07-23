@@ -10,13 +10,13 @@ interface ProductType {
 const products: ProductType[] = [
     {
         id: 1,
-        section: "Company",
-        link: ['About us', 'Blog', 'Contact us', 'Pricing', 'Testimonials'],
+        section: "Organization",
+        link: ['About us', 'Contact us', 'Testimonials'],
     },
     {
         id: 2,
         section: "Support",
-        link: ['Help center', 'Terms of service', 'Legal', 'Privacy Policy', 'Status']
+        link: ['Help center', 'Terms of service',]
     }
 ]
 
@@ -29,8 +29,10 @@ const footer = () => {
                     {/* COLUMN-1 */}
 
                     <div className='col-span-4'>
-                        <img src={'/assets/logo/Logo2.svg'} alt="logo" className='pb-4' />
-                        <h3 className='text-white text-lg font-medium leading-9 mb-4 lg:mb-20'> Level up your skills, and get dream <br /> job with passion. </h3>
+                        <img  src={'/assets/logo/estogo.png'}
+                                    alt="EST"
+                                    width={"78px"} className='pb-4' />
+                        <h3 className='text-white text-lg font-medium leading-9 mb-4 lg:mb-20'>"Education is the most powerful weapon which you can use to change the world." <br/> (Nelson Mandela)</h3>
                         <div className='flex gap-4'>
                             <Link href="/"><img src={'/assets/footer/insta.svg'} alt="instagram" className='footer-icons' /></Link>
                             <Link href="/"><img src={'/assets/footer/dribble.svg'} alt="dribble" className='footer-icons' /></Link>
@@ -61,7 +63,7 @@ const footer = () => {
                         <div className="relative text-white focus-within:text-white flex flex-row-reverse">
                             <input type="Email address" name="q" className="py-4 text-sm w-full text-white bg-gray-900 rounded-md pl-4 focus:outline-none bg-emailbg focus:text-white" placeholder="Your email address" autoComplete="off" />
                             <div className="absolute inset-y-0 right-0 flex items-center pr-2">
-                                <button type="submit" className="p-1 focus:outline-none focus:shadow-outline">
+                                <button className="p-1 focus:outline-none focus:shadow-outline">
                                     <img src={'/assets/footer/inputIcon.svg'} alt="inputicon" />
                                 </button>
                             </div>
@@ -74,7 +76,7 @@ const footer = () => {
             {/* All Rights Reserved */}
 
             <div className='pb-24 px-4'>
-                <h3 className='text-center text-offwhite'>@2023 - All Rights Reserved by <Link href="https://adminmart.com/" target="_blank"> Adminmart.com</Link></h3>
+                {/* <h3 className='text-center text-offwhite'><Link href="" target="_blank"> </Link></h3> */}
             </div>
 
         </div>

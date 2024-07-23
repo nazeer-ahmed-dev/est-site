@@ -4,6 +4,8 @@ import Tabs from './components/Courses/Courses';
 import Mentor from './components/Mentor/Mentor';
 import Students from './components/Students/Students';
 import Newsletter from './components/Newsletter/Newsletter';
+import Members from './components/Members/members';
+import Gallery from './components/Gallery/gallery';
 
 export default function Home() {
   return (
@@ -11,9 +13,11 @@ export default function Home() {
       <Banner />
       {/* <Companies /> */}
       <Tabs />
-      {/* <Mentor />
+      <Members/>
+      <Gallery/>
+      {/* <Mentor /> */}
       <Students />
-      <Newsletter /> */}
+      <Newsletter />
     </main>
   )
 }

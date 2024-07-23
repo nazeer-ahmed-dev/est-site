@@ -1,4 +1,7 @@
-// MENTORS DATA
+"use client"
+
+import Image from 'next/image';
+import Slider, { Settings } from 'react-slick'
 
 interface Product {
     id: number;
@@ -60,45 +63,99 @@ const products: Product[] = [
     },
 ]
 
+
+
+
 const Mentor = () => {
+    const sliderConfig: Settings = {
+        infinite: true,
+        // autoplay: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        // prevArrow: <SliderArrow type="prev" />,
+        // nextArrow: <SliderArrow type="next" />,
+        dots: true,
+        // appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
+        customPaging: () => (
+            <></>
+        //   <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
+        ),
+      }
+      const settings = {
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        // centerMode: true,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: false,
+        speed: 4000,
+        autoplaySpeed: 2000,
+        cssEase: "linear",
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            }
+        ]
+    };
+
+
+      
     return (
             <div id="mentors-section" className="mx-auto max-w-2xl pb-16 px-4 sm:py-20 sm:px-6 lg:max-w-7xl lg:px-8">
 
                 <div className='sm:flex justify-between items-center mb-12'>
-                    <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-gray-900 my-4">Meet with our Mentors</h2>
+                    <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-gray-900 my-4">Gallery</h2>
                     <div>
                         <button className="bg-transparent hover:bg-purple text-purple font-medium hover:text-white py-3 px-4 border border-lightgrey hover:border-transparent rounded">
-                            Explore 10+ our Mentor
+                            Explore Gallery
                         </button>
                     </div>
                 </div>
 
-                <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                    {products.map((product) => (
-                        <div key={product.id} className="group relative">
-                            <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80">
-                                <img
-                                    src={product.imageSrc}
-                                    alt={product.imageAlt}
-                                    className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                                />
-                            </div>
-                            <div className="mt-4 flex justify-center ">
-                                <div>
-                                    <div className='border border-white rounded-lg -mt-8 bg-white p-2 mentorShadow'>
-                                        <h3 className="text-sm text-gray-700 text-center">
-                                            <a href={product.href}>
-                                                <span aria-hidden="true" className="absolute inset-0" />
-                                                {product.name}
-                                            </a>
-                                        </h3>
-                                    </div>
-                                    <p className="mt-3 text-2xl font-semibold text-offblack text-center">{product.color}</p>
-                                </div>
-                            </div>
-                        </div>
+                <Slider {...settings} >
+                {/* <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8"> */}
+                    {products.map((product,i) => (
+                       <div key={i}>
+                       <div className='m-3 py-14 my-10 text-center'>
+                           <div className="relative">
+                               <Image src={product.imageSrc} alt="gaby" width={362} height={262} className="inline-block m-auto" />
+                               <div className="absolute top-[50%] right-[2%]">
+                                   {/* <Image src={'/images/Expert/Linkedin.svg'} alt="linkedin" width={220} height={120} /> */}
+                               </div>
+                           </div>
+                           {/* <h3 className='text-2xl font-semibold text-lightblack'>{product.name}</h3> */}
+                           {/* <h4 className='text-lg font-normal text-lightblack pt-4 pb-2 opacity-50'>{items.profession}</h4> */}
+                       </div>
+                   </div>
                     ))}
-                </div>
+                {/* </div> */}
+                     </Slider>
             </div>
     )
 }

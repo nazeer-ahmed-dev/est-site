@@ -21,6 +21,7 @@ const navigation: NavigationItem[] = [
     { name: 'Members', href: '#mentors-section', current: false },
     { name: 'Gallery', href: '#mentors-section', current: false },
     { name: 'Testimonial', href: '#testimonial-section', current: false },
+    { name: 'Announcement', href: '#testimonial-section', current: false },
     { name: 'Join us', href: '#join-section', current: false },
 ]
 
