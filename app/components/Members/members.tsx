@@ -19,7 +19,7 @@ const postData: DataType[] = [
         imgSrc: '/assets/profile/nazeerahmed.png',
     },
     {
-        profession: 'Accounts Office',
+        profession: 'Accounts Officer',
         name: 'Partab Rai',
         imgSrc: '/assets/profile/partabrai.png',
     },
